@@ -9,23 +9,25 @@ $(document).ready(function(){
         },
         dataType: "html",
 
-        success: function(reponse) {
+        success:
+        function(reponse) {
             $('#champ_dossier').html(reponse);
-        }
-    });
+            $(".elements").click(function(){
+                var dossier = $(this).attr('id');
+                $.ajax({
+                    url:'fonction.php',
+                    type:'POST',
+                    data:{
+                        dirname:'/' + dossier + '/'
+                    },
+                    datatype: "html",
 
-    $('.elements').click(function(){
-        $.ajax({
-            url:'fonction.php',
-            type:'POST',
-            data:{
-                dirname:'/'
-            },
-            dataType: "html",
-
-            success: function(reponse) {
-                $('#champ_dossier').html(reponse);
-            }
-        });
+                    success:
+                    function(reponse) {
+                        $('#champ_dossier').html(reponse);
+                    }
+                })
+            });
+        },
     });
 });

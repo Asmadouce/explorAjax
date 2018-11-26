@@ -9,7 +9,7 @@ function ouvrir($dir) {
         if ($dh = opendir($dir)) {
             while (($file = readdir($dh)) !== false) {
                 if (filetype($dir . $file) == 'dir') {
-                    echo '<div class="elements"><i class="fas fa-folder"></i>' . $file . '</div>';
+                    echo '<div class="elements" id="' . $file . '"><i class="fas fa-folder"></i>' . $file . '</div>';
                 }else{
                     echo '<div class="filelements"><i class="far fa-file"></i>' . $file . '</div>';
                 }
