@@ -10,9 +10,22 @@
 </head>
 <body>
 
+<?php require ('fonction.php'); ?>
+
     <h1>Asmadouce et khris87 font un explorateur de fichiers</h1>
+		<section id="explorateur">
+		    <div class="container">
+		        <button><i class="fas fa-angle-left"></i></button>
+		        <span id="chemin"></span>
+		        <div id="champ_dossier">
+
+		        </div>
+		    </div>
+		</section>
 
 <script src="script/jQuery.js"></script>
-<script src="library/bootstrap/js/bootstrap.bundle.js"></script> 
+<script src="library/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="script/script.js"></script>
+
 </body>
 </html>
