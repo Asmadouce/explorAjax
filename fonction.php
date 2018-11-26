@@ -22,6 +22,4 @@ function ouvrir($dir) {
 
 ouvrir($dir);
 
-echo '<span>' . $dir . '</span>';
-
 ?>
