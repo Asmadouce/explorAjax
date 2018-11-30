@@ -10,25 +10,67 @@
 .elements
 {
     color: red;
-    padding: 10px;
+    padding: 15px;
     width: 138px;
     height: 75px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.elements:hover
-{
-    color: green;
-    transform: scale(0.8,0.8);
-}
+    .elements:hover
+    {
+        color: green;
+        transform: scale(1.1,1.1);
+    }
 
 .filelements
 {
     color: blue;
-    padding: 10px;
+    padding: 15px;
     width: 138px;
     height: 75px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+    .filelements:hover
+    {
+        color: grey;
+        transform: scale(0.8,0.8);
+    }
+
+#retour
+{
+    width: 50px;
+    height: 35px;
+    border-radius: 6px;
+    border: 3px double burlywood;
+    margin: 10px;
+    background-color: cadetblue;
+    color: burlywood;
+    font-size: 25px;
+}
+
+.retour
+{
+    width: auto;
+    height: 35px;
+    border-radius: 6px;
+    border: 3px double burlywood;
+    margin: 10px;
+    background-color: cadetblue;
+    color: burlywood;
+    font-size: 20px;
+}
+
+#racine
+{
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 30%;
+    border: 3px double burlywood;
+    background-color: cadetblue;
+    color: burlywood;
+    font-size: 25px;
 }

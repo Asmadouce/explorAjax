@@ -16,6 +16,7 @@
 		<section id="explorateur">
 		    <div class="container">
 		        <button id="retour"><i class="fas fa-angle-left"></i></button>
+				<button id="racine">/</button>
 		        <span id="chemin"></span>
 		        <div id="champ_dossier">
 

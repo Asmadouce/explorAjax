@@ -18,12 +18,12 @@ $(document).ready(function(){
                 $(".elements").click(function(){    
                     var dossier =$(this).attr('id');
                     path = path + dossier + '/';
+                    navigation(path); 
                     boutonnage(path);
-                    navigation(path);
+
                 });
-                /*$("#retour").click(function(){
+                $("#retour").click(function(){
                     pathButton = path.split('/');
-                    console.log(pathButton);
                     pathButton.pop();                    
                     pathButton.shift();
                     pathButton.pop();
@@ -31,7 +31,7 @@ $(document).ready(function(){
                     if(path == '//'){path = '/';}
                     navigation(path);
                     boutonnage(path);
-                });*/
+                });
             }
         });
     
@@ -49,15 +49,25 @@ $(document).ready(function(){
         }
         text += "</span>";
         $('#chemin').html(text);
-        $(".retour").click(function(){
+        $('.retour').click(function(){
             var dos = parseInt($(this).attr('id'));
             pathButton.splice(dos + 1);
+            pathL = dos;
+            text = "<span>";
+            for(i=0;i<=pathL;i++){
+                text += '<button class="retour" id="' + i + '">' + pathButton[i] + '</button>';
+            }
+            text += "</span>";
+            $('#chemin').html(text);    
             path = '/' + pathButton.join('/') + '/';
             navigation(path);
         });
-
     }
 
     navigation('/');
+    $('#racine').click(function(){
+        navigation("/");
+        boutonnage("/");
+    });
 
 });
